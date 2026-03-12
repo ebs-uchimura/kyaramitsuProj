@@ -1,0 +1,31 @@
+{
+  "name": "kyaramitsu-server",
+  "productName": "kyaramitsu-server",
+  "version": "1.0.3",
+  "description": "Web application for kyaramitsu-server",
+  "main": "kyaramitsu.ts",
+  "scripts": {
+    "start": "ts-node kyaramitsu.ts"
+  },
+  "keywords": [],
+  "author": {
+    "name": "ebs-uchimura",
+    "email": "uchimura@ebisu-do.jp"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "log4js": "^6.9.1",
+    "mysql2": "^3.14.2",
+    "sanitize-html": "^2.17.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.16.3"
+  },
+  "license": "GPL-3.0"
+}

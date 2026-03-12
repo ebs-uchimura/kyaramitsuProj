@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/manage.css">
+    <link rel="stylesheet" href="/css/button.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script src="https://postcode-jp.com/js/postcodejp.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+    <script src="/js/detailmanage.js"></script>
+    <script>
+      $(function () {
+        // set starttime1
+        const setStartTimes1 = (time) => {
+          // time
+          let tmpTime = "";
+          // if empty set default time
+          if (time == "") {
+            console.log("empty");
+            tmpTime = "0:00";
+          } else {
+            tmpTime = time;
+          }
+          // initialize timepicker
+          $('input.timepicker1').timepicker({
+            'minTime': '0:00',
+            'maxTime': '23:30',
+            'startTime': tmpTime,
+            'timeFormat': 'HH:mm'
+          });
+          $('input.timepicker1').timepicker('setTime', tmpTime);
+        }
+
+        // set starttime2
+        const setStartTimes2 = (time) => {
+          console.log(time);
+          // time
+          let tmpTime = "";
+          // if empty set default time
+          if (time == "") {
+            console.log("empty");
+            tmpTime = "0:00";
+          } else {
+            tmpTime = time;
+          }
+          // initialize timepicker
+          $('input.timepicker2').timepicker({
+            'minTime': '0:00',
+            'maxTime': '23:30',
+            'startTime': tmpTime,
+            'timeFormat': 'HH:mm'
+          });
+          $('input.timepicker2').timepicker('setTime', tmpTime);
+        }
+
+        // set endtime1
+        const setEndTimes1 = (time) => {
+          console.log(time);
+          // time
+          let tmpTime = "";
+          // if empty set default time
+          if (time == "") {
+            console.log("empty");
+            tmpTime = "0:00";
+          } else {
+            tmpTime = time;
+          }
+          // initialize timepicker
+          $('input.timepicker3').timepicker({
+            'minTime': '0:00',
+            'maxTime': '23:30',
+            'startTime': tmpTime,
+            'timeFormat': 'HH:mm'
+          });
+          $('input.timepicker3').timepicker('setTime', tmpTime);
+        }
+
+        // set endtime2
+        const setEndTimes2 = (time) => {
+          console.log(time);
+          // time
+          let tmpTime = "";
+          // if empty set default time
+          if (time == "") {
+            console.log("empty");
+            tmpTime = "0:00";
+          } else {
+            tmpTime = time;
+          }
+          // initialize timepicker
+          $('input.timepicker4').timepicker({
+            'minTime': '0:00',
+            'maxTime': '23:30',
+            'startTime': tmpTime,
+            'timeFormat': 'HH:mm'
+          });
+          $('input.timepicker4').timepicker('setTime', tmpTime);
+        }
+        setStartTimes1("<%= data.starttime1 %>");
+        setStartTimes2("<%= data.starttime2 %>");
+        setEndTimes1("<%= data.endtime1 %>");
+        setEndTimes2("<%= data.endtime2 %>");
+      });
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h2><%= title %></h2>
+      <a href="/shop_edit">前の画面へ戻る</a>
+    </header>
+    <main>
+      <form action="/edit" id="editform" method="post">
+        <table id="newsedit">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>設定値</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ID</td>
+              <td>
+                <%= data.id %>
+              </td>
+            </tr>
+            <tr>
+              <td>エリアID</td>
+              <td>
+                <input type="number" class="standard" name="area_id" min="1" max="7" value="<%= data.area_id %>">
+              </td>
+            </tr>
+            <tr>
+              <td>店舗名</td>
+              <td>
+                <input type="text" class="wide" name="shopname" value="<%= data.shopname %>" size="8" maxlength="20">
+              </td>
+            </tr>
+            <tr>
+              <td>見出し</td>
+              <td>
+                <textarea class="textarea" rows="5" cols="80" name="headline" value=""><%- data.headline %></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>店舗詳細</td>
+              <td>
+                <textarea class="textarea" rows="5" cols="80" name="detail" value=""><%= data.detail %></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>認定エリア名</td>
+              <td>
+                <input type="text" class="standard" name="cityname" value="<%= data.cityname %>">
+              </td>
+            </tr>
+            <tr>
+              <td>開始時間1</td>
+              <td>
+                <label for="businesstime1_1">&ensp;営業開始時間1</label><br>
+                <input type="text" id="businesstime1_1" class="timepicker1" name="businesstime1_1" autocomplete="off" />
+              </td>
+            </tr>
+            <tr>
+              <td>終了時間1</td>
+              <td>
+                <label for="businesstime1_2">&ensp;営業終了時間1</label><br>
+                <input type="text" id="businesstime1_2" class="timepicker3" name="businesstime1_2" autocomplete="off" />
+              </td>
+            </tr>
+            <tr>
+              <td>開始時間2</td>
+              <td>
+                <label for="businesstime2_1">&ensp;営業開始時間2</label><br>
+                <input type="text" id="businesstime2_1" class="timepicker2" name="businesstime2_1" autocomplete="off" />
+              </td>
+            </tr>
+            <tr>
+              <td>終了時間2</td>
+              <td>
+                <label for="businesstime2_2">&ensp;営業終了時間2</label><br>
+                <input type="text" id="businesstime2_2" class="timepicker4" name="businesstime2_2" autocomplete="off" />
+              </td>
+            </tr>
+            <tr>
+              <td>住所</td>
+              <td>
+                〒&ensp;&ensp;&nbsp;<input type="text" id="sample1_zip" name="zip" class="default" value="<%= data.zip %>"><br><br>
+                住所&ensp;<input type="text" id="sample1_addr" name="address" class="superwide" value="<%= data.address %>">
+                <div>※必ず都道府県から入力してください。</div>
+              </td>
+            </tr>
+            <tr>
+              <td>画像URL1</td>
+              <td>
+                <input class="showpath" type="checkbox">&ensp;ファイル選択&ensp;
+                <input type="text" class="superwide" name="filepath1" value="<%= data.imageurl1 %>" placeholder="">
+                <input type="file" class="display-none" name="file1">
+              </td>
+            </tr>
+            <tr>
+              <td>画像URL2</td>
+              <td>
+                <input class="showpath" type="checkbox">&ensp;ファイル選択&ensp;
+                <input type="text" class="superwide" name="filepath2" value="<%= data.imageurl2 %>" placeholder="">
+                <input type="file" class="display-none" name="file2">
+              </td>
+            </tr>
+            <tr>
+              <td>画像URL3</td>
+              <td>
+                <input class="showpath" type="checkbox">&ensp;ファイル選択&ensp;
+                <input type="text" class="superwide" name="filepath3" value="<%= data.imageurl3 %>" placeholder="">
+                <input type="file" class="display-none" name="file3">
+              </td>
+            </tr>
+            <tr>
+              <td>画像URL4</td>
+              <td>
+                <input class="showpath" type="checkbox">&ensp;ファイル選択&ensp;
+                <input type="text" class="superwide" name="filepath4" value="<%= data.imageurl4 %>" placeholder="">
+                <input type="file" class="display-none" name="file4">
+              </td>
+            </tr>
+            <tr>
+              <td>画像URL5</td>
+              <td>
+                <input class="showpath" type="checkbox">&ensp;ファイル選択&ensp;
+                <input type="text" class="superwide" name="filepath5" value="<%= data.imageurl5 %>" placeholder="">
+                <input type="file" class="display-none" name="file5">
+              </td>
+            </tr>
+            <tr>
+              <td>表示</td>
+              <td>
+                <input type="checkbox" id="checkbox" class="checkbox" name="checkbox[]" value="1" <%=data.display==1
+                  ? 'checked' : '' %> >
+              </td>
+            </tr>
+            <tr>
+              <td>定休日</td>
+              <td>
+                <input type="text" class="wide" name="holiday" value="<%= data.holiday %>" size="8">
+              </td>
+            </tr>
+            <tr>
+              <td>備考</td>
+              <td>
+                <textarea class="textarea" rows="5" cols="80" name="remark" value="">
+                  <%= data.remark %>
+                </textarea>
+              </td>
+            </tr>
+            <input type="hidden" id="id" name="id" value="<%= data.id %>">
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>
+                <button class="subbutton button-g button-6 button-wide" type="submit">編集</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="/shop_edit">前の画面へ戻る</a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </form>
+      <div class="deleteaera">
+        <form action="/delete" id="deleteform" method="post">
+          <input type="hidden" id="id" name="id" value="<%= data.id %>" />
+          <button class="subbutton button-g button-5 button-wide" type="submit">削除</button>
+        </form>
+      </div>
+    </main>
+    <%- include('./partials/manage_footer.ejs') %>
+  </body>
+
+</html>

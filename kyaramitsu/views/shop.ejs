@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta charset="UTF-8">
+  <title>酔神 伽羅蜜 KYARA-MITSU | <%= data.shopname %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="全国のここだけ 酔神 伽羅蜜が飲める店をご紹介しています">
+  <meta property="og:url" content="<%= root %>">
+  <meta property=" og:type" content="website">
+  <meta property="og:title" content="全国伽羅蜜が飲める店 | 酔神 伽羅蜜 KYARA-MITSU">
+  <meta property="og:description" content="全国のここだけ 酔神 伽羅蜜が飲める店をご紹介しています">
+  <meta property="og:site_name" content="酔神 伽羅蜜 KYARA-MITSU">
+  <meta property="og:image" content="/images/icon/apple-touch-icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="<%= root %>"">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" href="/images/icon/android-touch-icon.png" sizes="192x192">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/shop.css">
+  <link rel="stylesheet" href="/css/button.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="mainlogo">
+      <a href="/">
+        <img class="bottle" src="/images/kyaramitsu_bottle.png" alt="恵比寿堂ボトルロゴ">
+      </a>
+      <a href="/">
+        <img class="logo" src="/images/kyaramitsu.png" alt="伽羅蜜ロゴ">
+      </a>
+    </h1>
+    <div class="img-txt">全国伽羅蜜が飲める店 | 酔神 伽羅蜜 KYARA-MITSU</div>
+    <nav>
+      <ul>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#kyara">酔神 伽羅蜜</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#system">店舗募集</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#contact">お申し込み</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#kodawari">こだわり</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#rekishi">プレミアム焼酎の歴史</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <nav>
+      <ol class="breadcrumb">
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/area/<%= data.area_id %>/1"><%= data.areaname %></a></li>
+      </ol>
+    </nav>
+    <div id="detailarea" class="main-detail-wrapper">
+      <div class="shopimages">
+        <div class="imagearea">
+          <div class="topimage">
+            <% if (data.useoriginal) { %>
+              <img src="/images/no-image.jpg">
+              <% } else if (data.originalimageurl != "" && data.originalimageurl != null) { %>
+              <img src="<%= data.originalimageurl %>" onerror="this.style.display='none'">
+              <% } else { %>
+              <img src="<%= data.imageurl1 %>" onerror="this.style.display='none'">
+              <% } %>
+          </div>
+          <div class="subimages">
+            <img src="<%= data.imageurl2 %>" onerror="this.style.display='none'">
+            <img src="<%= data.imageurl3 %>" onerror="this.style.display='none'">
+            <img src="<%= data.imageurl4 %>" onerror="this.style.display='none'">
+            <img src="<%= data.imageurl5 %>" onerror="this.style.display='none'">
+          </div>
+          <div class="imagesource">
+            <% if (data.imagesource != "") { %>
+              画像出典:<%= data.imagesource %>
+            <% } %>
+          </div>
+        </div>
+        <div class="shopinfo">
+          <p>認定エリア</p>
+          <div class="cityname"><%= data.cityname %></div>
+          <div class="shopname"><%= data.shopname %></div>
+          <div class="headline"><%= data.headline %></div>
+          <div class="detail"><%= data.detail %></div>
+          <div class="detailsource">
+            <% if (data.detailsource != "") { %>
+              出典:<%= data.detailsource %>
+            <% } %>
+          </div>
+          <table class="shoptable">
+            <caption>店舗情報</caption>
+            <tr>
+              <th>店名</th>
+              <td><%= data.shopname %></td>
+            </tr>
+            <tr>
+              <th>ジャンル</th>
+              <td><%= data.genre %></td>
+            </tr>
+            <tr>
+              <th>郵便番号</th>
+              <td><%= data.zip %></td>
+            </tr>
+            <tr>
+              <th>都道府県</th>
+              <td><%= prefecture %></td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td><%= address %></td>
+            </tr>
+            <tr>
+              <th>営業時間1</th>
+              <td><%= data.starttime1 %>-<%= data.endtime1 %></td>
+            </tr>
+            <tr>
+              <th>営業時間2</th>
+              <td><%= data.starttime2 %>-<%= data.endtime2 %></td>
+            </tr>
+            <tr>
+              <th>定休日</th>
+              <td><%= data.holiday %></td>
+            </tr>
+            <tr>
+              <th>備考</th>
+              <td>
+                <% if (data.bannotation) { %>
+                  <%= data.bannotation %>
+                  <br>
+                <% } %>
+                <% if (data.hannotation) { %>
+                  <%= data.hannotation %>
+                <% } %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="buttonarea">
+      <a href="javascript:history.back();"><button class="button-g button-wide button-1">戻る</button></a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-column">
+      <ul>
+        <a href="https://ebisu-do.jp/company.html" class="overlink" target="_blank">
+          <li class="company_link">会社概要</li>
+        </a>
+        <a href="https://suijinclub.jp/view/contract" class="overlink" target="_blank">
+          <li class="commercial_link">特定商取引法に基づく表記</li>
+        </a>
+        <a href="https://ebisu-do.jp/policy.html" class="overlink" target="_blank">
+          <li class="privacy_link">プライバシーポリシー</li>
+        </a>
+      </ul>
+      <div class="footer-logo">
+        <p class="madein">Produced by</p>
+        <a href="https://ebisu-do.jp"><img src="/images/eb.png" alt="ebisudo logo"></a>
+        <p class="copyright">Copyright 2025 Ebisudo, Inc.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

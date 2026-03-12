@@ -1,0 +1,30 @@
+/*明朝フォント*/
+body {
+    font-family: "Noto Serif JP", serif;
+}
+
+/*Header*/
+#section-4 img {
+    width: 200px;
+}
+
+.btn_navigationToggle {
+    display: none;
+}
+
+/*footer*/
+#section-1 {
+    background-color: #ebebeb30;
+}
+
+.p-footer__inner {
+    padding: 3px;
+}
+
+/*スマホサイズ*/
+@media screen and (max-width: 480px) {
+    /*Header*/
+    #section-4 img {
+        width: 150px;
+    }
+}

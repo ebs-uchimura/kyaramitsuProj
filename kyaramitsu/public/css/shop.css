@@ -1,0 +1,373 @@
+/*
+/* index.css
+*/
+
+@charset "utf-8";
+
+/*------------------------------
+ ▼ forSP
+ -------------------------------*/
+img {
+  filter: brightness(1.1);
+}
+
+/* breadcrumb */
+main .breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 3vw 0 0 2vw;
+  font-size: 2vw;
+}
+
+main .breadcrumb li:not(:last-of-type)::after {
+  content: "›";
+  margin: 0 .6em;
+  /* 記号の左右の余白 */
+  color: #777;
+  /* 記号の色 */
+}
+
+/* detail area */
+main .main-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2vw 0;
+  padding: 0;
+}
+
+main .main-detail-wrapper .shopimages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1vw 0;
+  padding: 0 0 1vw;
+  position: relative;
+}
+
+main .main-detail-wrapper .shopimages .imagearea {
+  width: 98%;
+  margin: 0 1%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main .main-detail-wrapper .shopimages .imagearea .topimage {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+main .main-detail-wrapper .shopimages .imagearea .topimage img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+main .main-detail-wrapper .shopimages .imagearea .subimages {
+  display: flex;
+}
+
+main .main-detail-wrapper .shopimages .imagearea .subimages img {
+  width: 25%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+main .main-detail-wrapper .shopimages .imagearea .imagesource {
+  text-align: right;
+  font-size: 2vw;
+}
+
+main .main-detail-wrapper .shopinfo {
+  margin: 2vw;
+}
+
+main .main-detail-wrapper .shopinfo p {
+  margin: 0;
+  font-size: 2.5vw;
+}
+
+main .main-detail-wrapper .shopinfo .cityname {
+  margin: 0 0 5vw;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+main .main-detail-wrapper .shopinfo .shopname {
+  margin: 0 0 5vw;
+  font-size: 4vw;
+  font-weight: bold;
+}
+
+main .main-detail-wrapper .shopinfo .headline {
+  margin: 5vw 0;
+}
+
+main .main-detail-wrapper .shopinfo .detail {
+  margin: 5vw 0;
+}
+
+main .main-detail-wrapper .shopinfo .shoptable {
+  width: 100%;
+  margin: 5vw 0;
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+}
+
+main .main-detail-wrapper .shopinfo .shoptable tr th {
+  padding: 1vw;
+  font-size: 2.8vw;
+  background-color: #888;
+  border: 1px solid #CCC;
+  color: #fff;
+  font-weight: bold;
+}
+
+main .main-detail-wrapper .shopinfo .shoptable tr td {
+  padding: 0 0 0 10px;
+  font-size: 2.5vw;
+  border: 1px solid #CCC;
+}
+
+main .main-detail-wrapper .shopinfo .detailsource {
+  text-align: right;
+  font-size: 2vw;
+}
+
+main .headline {
+  margin: 5vw 2vw;
+  font-size: 2.5vw;
+}
+
+main .detail {
+  margin: 0 2vw;
+  font-size: 2.8vw;
+}
+
+/*-------------------------------
+ ▼forTablet
+ --------------------------------*/
+@media screen and (min-width: 768px) {
+
+  /* breadcrumb */
+  main .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 15px 0 0 10px;
+    font-size: 0.8rem;
+  }
+
+  main .breadcrumb li:not(:last-of-type)::after {
+    content: "›";
+    margin: 0 .6em;
+    color: #777;
+  }
+
+  /* detail area */
+  main .main-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    margin: 0;
+    padding: 0;
+  }
+
+  main .main-detail-wrapper .shopimages {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 0 10px;
+    position: relative;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea {
+    width: 500px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .topimage {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .topimage img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .subimages {
+    display: flex;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .subimages img {
+    width: 25%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .imagesource {
+    font-size: 0.6rem;
+  }
+
+  main .main-detail-wrapper .shopinfo {
+    margin: 10px 0;
+  }
+
+  main .main-detail-wrapper .shopinfo p {
+    margin: 0 20px;
+    font-size: 0.8rem;
+  }
+
+  main .main-detail-wrapper .shopinfo .cityname {
+    margin: 0 0 20px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  main .main-detail-wrapper .shopinfo .shopname {
+    margin: 0 20px 20px;
+    font-size: 1.5rem;
+  }
+
+  main .main-detail-wrapper .shopinfo .headline {
+    margin: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  main .main-detail-wrapper .shopinfo .detail {
+    margin: 20px;
+    font-size: 0.9rem;
+  }
+
+  main .main-detail-wrapper .shopinfo .shoptable {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  main .main-detail-wrapper .shopinfo .shoptable tr th {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  main .main-detail-wrapper .shopinfo .shoptable tr td {
+    padding: 0 0 0 10px;
+    font-size: 0.8rem;
+  }
+
+  main .main-detail-wrapper .shopinfo .detailsource {
+    font-size: 0.6rem;
+  }
+}
+
+/*-------------------------------
+ ▼forPC
+ --------------------------------*/
+@media screen and (min-width: 1200px) {
+
+  /* breadcrumb */
+  main .breadcrumb {
+    font-size: 0.7rem;
+  }
+
+  main .breadcrumb li:not(:last-of-type)::after {
+    margin: 0 .7em;
+  }
+
+  /* product area */
+  main .main-detail-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1240px;
+    margin: 20px 0 10px;
+    padding: 0;
+  }
+
+  main .main-detail-wrapper .shopimages {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px;
+    padding: 0 0 10px;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea {
+    width: 48%;
+    margin: 0 1%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .topimage {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .topimage img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .subimages {
+    display: flex;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .subimages img {
+    width: 25%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  main .main-detail-wrapper .shopimages .imagearea .imagesource {
+    font-size: 0.6rem;
+  }
+
+  main .main-detail-wrapper .shopinfo {
+    width: 50%;
+  }
+
+  main .main-detail-wrapper .shopinfo .shopname {
+    margin: 0 20px 20px;
+  }
+
+  main .main-detail-wrapper .shopinfo .headline {
+    margin: 20px;
+    font-size: 0.9rem;
+  }
+
+  main .main-detail-wrapper .shopinfo .detail {
+    margin: 0 20px;
+    font-size: 0.9rem;
+  }
+
+  main .main-detail-wrapper .shopinfo .shoptable {
+    width: 100%;
+    margin: 30px 20px 10px;
+  }
+
+  main .main-detail-wrapper .shopinfo .shoptable tr th {
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  main .main-detail-wrapper .shopinfo .shoptable tr td {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  main .main-detail-wrapper .shopinfo .detailsource {
+    font-size: 0.6rem;
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/manage/manage.css">
+  <link rel="stylesheet" href="/css/manage.css">
+  <link rel="stylesheet" href="/css/button.css">
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <div id="buttonarea" class="buttonarea">
+    <div class="operation_area">
+      <h3>店舗登録</h3>
+      <a href="/shop_regist" class="button-g button-1 button-wide" role="button">店舗登録</a>
+    </div>
+    <div class="operation_area">
+      <h3>店舗編集</h3>
+      <a href="/shop_edit" class="button-g button-1 button-wide" role="button">店舗編集</a>
+    </div>
+  </div>
+  <%- include('./partials/manage_footer.ejs') %>
+</body>
+
+</html>

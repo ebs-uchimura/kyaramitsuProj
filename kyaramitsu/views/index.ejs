@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta charset="UTF-8">
+  <title>全国伽羅蜜が飲める店 | 酔神 伽羅蜜 KYARA-MITSU</title>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D4EX6X6902');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="全国のここだけ 酔神 伽羅蜜が飲める店をご紹介しています">
+  <meta property="og:url" content="<%= root %>">
+  <meta property=" og:type" content="website">
+  <meta property="og:title" content="全国伽羅蜜が飲める店 | 酔神 伽羅蜜 KYARA-MITSU">
+  <meta property="og:description" content="全国のここだけ 酔神 伽羅蜜が飲める店をご紹介しています">
+  <meta property="og:site_name" content="酔神 伽羅蜜 KYARA-MITSU">
+  <meta property="og:image" content="/images/icon/apple-touch-icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="<%= root %>">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" href="/images/icon/android-touch-icon.png" sizes="192x192">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/button.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazyload/2.0.3/lazyload-min.js"></script>
+  <script>
+    $(function () {
+      getGlobalRoot("<%= root %>");
+      getGlobalArea("<%= areaid %>");
+      $("img.lazyload").lazyload();
+    });
+  </script>
+  <script src="/js/index.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="mainlogo">
+      <a href="/">
+        <img class="bottle" src="/images/kyaramitsu_bottle.png" alt="恵比寿堂ボトルロゴ">
+      </a>
+      <a href="/">
+        <img class="logo" src="/images/kyaramitsu.png" alt="伽羅蜜ロゴ">
+      </a>
+    </h1>
+    <div class="img-txt">全国伽羅蜜が飲める店 | 酔神 伽羅蜜 KYARA-MITSU</div>
+    <nav>
+      <ul>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#kyara">酔神 伽羅蜜</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#system">店舗募集</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#contact">お申し込み</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#kodawari">こだわり</a></li>
+        <li><a href="https://ebisu-do.jp/kyaramitsu/#rekishi">プレミアム焼酎の歴史</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="item-map">
+      <ul class="btn resphone">
+        <li class="hokkaido"><a href="/area/1/1">北海道</a></li>
+        <li class="tohoku"><a href="/area/2/1">東北</a></li>
+        <li class="hokuriku"><a href="/area/4/1">北陸・信越</a></li>
+        <li class="kanto"><a href="/area/3/1">関東</a></li>
+        <li class="tokai"><a href="/area/4/1">東海</a></li>
+        <li class="kansai"><a href="/area/5/1">関西</a></li>
+        <li class="chugoku"><a href="/area/6/1">中国</a></li>
+        <li class="shikoku"><a href="/area/6/1">四国</a></li>
+        <li class="kyusyu"><a href="/area/7/1">九州・沖縄</a></li>
+      </ul>
+    </div>
+    <nav id="prefnav">
+      <ul>
+        <% if (prefecturenames) { %>
+          <% if (prefecturenames.length > 0) { %>
+            <% for (let i = 0; i < prefecturenames.length; i++) { %>
+              <li class="">
+                <a href="/pref/<%= prefectureids[i] %>/1"><%= prefecturenames[i] %></a>
+              </li>
+            <% } %>
+          <% } %>
+        <% } %>
+      </ul>
+    </nav>
+    <div class="totalnumber">検索結果：<%= total %>件</div>
+    <div id="shoparea" class="main-shop-wrapper">
+      <hr>
+      <% for (let i=0; i < data.length; i++) { %>
+        <div class="flexbox">
+          <a href="/shop/<%= data[i].id %>" class="overlink"></a>
+          <div class="imagearea">
+            <div class="topimage">
+              
+              <% if (data[i].useoriginal) { %>
+              <img src="/images/no-image.jpg" loading="lazy">
+              <% } else if (data[i].originalimageurl != "" && data[i].originalimageurl != null) { %>
+              <img src="<%= data[i].originalimageurl %>" onerror="this.style.display='none'" loading="lazy">
+              <% } else { %>
+              <img src="<%= data[i].imageurl1 %>" loading="lazy">
+              <% } %>
+            </div>
+            <div class="subimages">
+              <img src="<%= data[i].imageurl2 %>" loading="lazy" onerror="this.style.display='none'">
+              <img src="<%= data[i].imageurl3 %>" loading="lazy" onerror="this.style.display='none'">
+              <img src="<%= data[i].imageurl4 %>" loading="lazy" onerror="this.style.display='none'">
+            </div>
+          </div>
+          <div class="articlearea">
+            <h2>
+              <%= data[i].cityname %>
+            </h2>
+            <h3>
+              <%= data[i].shopname %>
+            </h3>
+            <h4 class="headline">
+              <%= data[i].headline %>
+            </h4>
+            <div class="ellipsis">
+              <p>
+                <%= data[i].detail %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr>
+      <% } %>
+    </div>
+    <div id="buttonarea">
+      <% if (area) { %>
+        <% if (page > 1) { %>
+          <a href="/<%= mode %><%= area %><%= page - 1 %>"><button id="gotobefore" class="button-g button-wide button-1">前へ</button></a>
+        <% } %>
+        <% if (data.length >= 20) { %>
+          <a href="/<%= mode %><%= area %><%= page + 1 %>"><button id="gotonext" class="button-g button-wide button-1">次へ</button></a>
+        <% } %>
+      <% } %>
+    </div>
+  </main>
+  <span id="back">
+    <a href="#top" class="scroll-top-btn">
+      <i class="fas fa-chevron-circle-up" data-toggle=tooltip data-placement="bottom" title="トップへ移動"></i>先頭へ
+    </a>
+  </span>
+  <footer>
+    <div class="footer-column">
+      <ul>
+        <a href="https://ebisu-do.jp/company.html" class="overlink" target="_blank">
+          <li class="company_link">会社概要</li>
+        </a>
+        <a href="https://suijinclub.jp/view/contract" class="overlink" target="_blank">
+          <li class="commercial_link">特定商取引法に基づく表記</li>
+        </a>
+        <a href="https://ebisu-do.jp/policy.html" class="overlink" target="_blank">
+          <li class="privacy_link">プライバシーポリシー</li>
+        </a>
+      </ul>
+      <div class="footer-logo">
+        <p class="madein">Produced by</p>
+        <a href="https://ebisu-do.jp"><img src="/images/eb.png" alt="ebisudo logo"></a>
+        <p class="copyright">Copyright 2025 Ebisudo, Inc.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

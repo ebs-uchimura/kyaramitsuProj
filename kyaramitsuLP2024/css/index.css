@@ -1,0 +1,299 @@
+/*明朝フォント*/
+body {
+    font-family: "Noto Serif JP", serif;
+}
+
+/*筆書きフォント*/
+#section-9,
+#section-10 .p-article-lead-text,
+#section-11 .p-article-lead-text,
+#section-12 .p-article-lead-text,
+#section-14,
+#section-15 .p-article-lead-text,
+#section-55,
+#section-58,
+#section-27 {
+    font-family: "Yuji Boku", serif;
+}
+
+/*Header*/
+#section-64 img {
+    width: 200px;
+}
+
+#section-64 a {
+    color: #E3E3E3;
+}
+
+.p-m_navigationMenu[data-separation=bar] li + li::before {
+    color: #E3E3E3;
+}
+
+input {
+    padding: 0 !important;
+    font-family: "Noto Serif JP", serif;
+}
+
+/*About*/
+#section-43 {
+    height: 350px;
+    background-image: url(https://cdn.peraichi.com/userData/0da5116d-4d73-4383-964e-d9ac3afbf679/img/66c151827189c/original.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section-5 .c-wrapper--sm {
+    max-width: 960px;
+}
+
+#section-6 img {
+    height: 450px;
+}
+
+#section-5 .c-wrapper--no-gutter span:last-of-type {
+    background-color: #45454560;
+    padding: 0 10px;
+}
+
+/*Material*/
+#section-10 img,
+#section-11 img,
+#section-12 img {
+    border-radius: 50% 30% 40% 30% / 50% 50% 40% 40%;
+    overflow: hidden;
+}
+
+#section-10 .p-article-lead-text span,
+#section-11 .p-article-lead-text span,
+#section-12 .p-article-lead-text span {
+    background-color: #45454560;
+    padding: 0 10px;
+}
+
+/*Taste*/
+#section-45 {
+    height: 350px;
+    background-image: url(https://cdn.peraichi.com/userData/0da5116d-4d73-4383-964e-d9ac3afbf679/img/66c1558016dc6/original.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#section-51 {
+    background-color: #45454560;
+}
+
+#section-15 img {
+    border-radius: 40% 50% 30% 50% / 50% 50% 40% 40%;
+    overflow: hidden;
+}
+
+/*Merchandise*/
+#section-40 {
+    background-color: #ebebeb30;
+}
+
+#section-46 {
+    height: 550px;
+    background-image: url(https://cdn.peraichi.com/userData/0da5116d-4d73-4383-964e-d9ac3afbf679/img/66c169d6e642a/original.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*Sales*/
+#section-17 .c-wrapper--sm {
+    max-width: 960px;
+}
+
+#section-17 .c-wrapper--no-gutter span:last-of-type,
+#section-67 .c-wrapper--no-gutter span:last-of-type {
+    background-color: #45454560;
+    padding: 0 10px;
+}
+
+.p-heading-put-on-bdr__inner::before, 
+.p-heading-put-on-bdr__inner::after {
+    background-color: #E3E3E3;
+}
+
+.c-heading--bdr-thin-btm {
+    border-bottom: 1px solid #E3E3E3;
+}
+
+#section-18 .c-heading .pera1-editable {
+    background-color: #45454560;
+    padding: 3px 10px;
+}
+
+#section-60 .c-heading span {
+    background-color: #45454560;
+    padding: 0 10px;
+}
+
+#section-60 img {
+    border-radius: 50% 40% 50% 40% / 50% 50% 40% 40%;
+    overflow: hidden;
+    width: 300px;
+}
+
+/*Flow*/
+.p-premium-article-img-right__item-img img {
+    border: 0px solid #fff;
+    -webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.8);
+}
+
+/*Message*/
+#section-28 .p-article-lead-text span,
+#section-69 .p-article-lead-text span {
+    background-color: #45454560;
+    padding: 0 10px;
+}
+
+#section-28 img,
+#section-69 img {
+    border-radius: 40% 50% 40% 50% / 50% 50% 40% 40%;
+    overflow: hidden;
+}
+
+/*Item*/
+#section-29 img {
+    height: 350px;
+}
+
+#section-29 .c-inner--sm,
+#section-70 .c-inner--sm {
+    padding: 1px 10px 1px;
+}
+
+.p-funding-goal-borderd__flame {
+    border: 1px solid #E3E3E3;
+}
+
+.theme-custom .p-funding-goal-borderd__flame {
+    border-color: #E3E3E3;
+}
+
+/*Contact*/
+#section-33 .c-wrapper--no-gutter span:last-of-type {
+    background-color: #45454560;
+    padding: 0 10px;
+}
+
+#section-34 .p-form-simple .c-inner {
+    color: black;
+    padding: 20px;
+}
+
+#section-34 .p-form-simple .c-inner--one-elem {
+    background-image: url(https://cdn.peraichi.com/userData/0da5116d-4d73-4383-964e-d9ac3afbf679/img/66c3627b7df7b/original.jpg);
+}
+
+#section-34 .form_input {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*footer*/
+#section-1 {
+    background-color: #ebebeb30;
+}
+
+#section-36 {
+    background-color: #ebebeb30;
+}
+
+.p-footer__inner {
+    padding: 3px;
+}
+
+.pera1-form .hp { 
+    display:none !important; 
+    visibility:hidden !important; 
+}
+
+.fixed {
+    position: fixed;
+    width: 975px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+}
+
+
+/*スマホサイズ*/
+@media screen and (max-width: 480px) {
+    /*Header*/
+    #section-64 img {
+        width: 150px;
+    }
+
+    #section-64 a {
+        font-size: 14px;
+    }
+
+    /*Btn*/
+    #section-62 img,
+    #section-63 img {
+        width: auto;
+    }
+
+    .fixed {
+        position: fixed;
+        width: 90vw;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999999;
+    }
+
+    /*About*/
+    #section-65 .c-wrapper--no-gutter span:last-of-type {
+        background-color: #45454560;
+        padding: 0 5px;
+    }
+
+    #section-65 .u-align-center {
+        padding: 0;
+    }
+
+    #section-66 img {
+        height: 300px;
+    }
+
+    #section-43 {
+        height: 200px;
+        background-attachment: scroll;
+    }
+
+    /*Taste*/
+    #section-45 {
+        height: 200px;
+        background-attachment: scroll;
+    }
+
+    /*Message*/
+    #section-69 img {
+        height: 300px;
+    }
+
+    /*Item*/
+    #section-70 img {
+        height: 300px;
+    }
+
+    #section-46 {
+        height: 200px;
+        background-attachment: scroll;
+    }
+
+    /*Contact*/
+    .radio-inline label  {
+        font-size: 14px;
+    }
+}
+

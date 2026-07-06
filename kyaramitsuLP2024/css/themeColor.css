@@ -1,0 +1,36 @@
+.theme-custom , .p-header {
+    --block-bg-color: #0B0B0B;
+    background-color: #0B0B0B
+}
+
+.p-m_navigation {
+    background-color: #0B0B0B
+}
+
+.theme-custom .c-btn a,.theme-custom .c-btn input,.theme-custom .c-btn button,.theme-custom .c-btn .btn-customform-submit {
+    background-color: #E3E3E3
+}
+
+.theme-custom .c-heading--bdr-btm,.theme-custom .c-heading--bdr-thin-btm {
+    border-bottom-color: #E3E3E3
+}
+
+.theme-custom .p-heading-put-on-bdr__inner::before,.theme-custom .p-heading-put-on-bdr__inner::after {
+    background-color: #E3E3E3
+}
+
+.theme-custom .p-funding-goal-borderd__flame {
+    border-color: #E3E3E3
+}
+
+.theme-custom div[data-structure="b-header-logo-img-2"] .p-header--theme-color,.theme-custom div[data-structure="b-heading-marker"] .p-heading-marker:after,.theme-custom div[data-structure="b-heading-put-on-bdr"] .p-heading-put-on-bdr__inner:before,.theme-custom div[data-structure="b-heading-put-on-bdr"] .p-heading-put-on-bdr__inner:after,.theme-custom div[data-structure="b-heading-balloon--invert"] .p-heading-balloon--invert,.theme-custom div[data-structure="b-heading-arrow"] .p-heading-arrow--v2,.theme-custom div[data-structure="b-heading-arrow--has-subtext"] .p-heading-arrow--v2,.theme-custom div[data-structure="b-premium-heading-grad"] .p-premium-heading-grad__inner,.theme-custom div[data-structure="b-premium-heading-icon"] .p-heading-put-on-bdr__inner:before,.theme-custom div[data-structure="b-premium-heading-icon"] .p-heading-put-on-bdr__inner:after,.theme-custom div[data-structure="b-premium-sentence-merit"] .p-premium-sentence-merit__label,.theme-custom div[data-structure="b-premium-faq"] .p-premium-faq__icon--a,.theme-custom div[data-structure="b-premium-heading-grad"] .p-premium-heading-grad,.theme-custom div[data-structure="b-premium-btn-set-3"] .p-premium-btn-set-3__wrapper,.theme-custom div[data-structure="b-rectangle"] .p-others-rectangle__item-inner,.theme-custom div[data-structure="b-premium-btn-set-2"] .p-premium-btn-set-2__heading {
+    background-color: #E3E3E3
+}
+
+.theme-custom div[data-structure="b-funding-goal"] .p-funding-goal__head {
+    border-bottom: 1px solid #ccc
+}
+
+.theme-custom {
+    color: #E3E3E3
+}

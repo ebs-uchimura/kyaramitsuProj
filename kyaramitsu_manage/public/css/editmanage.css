@@ -1,0 +1,163 @@
+/*
+/* manage.css
+*/
+
+@charset "utf-8";
+
+body {
+  font-size: 0.7rem;
+  padding: 0 0 0 30px;
+}
+
+h2 {
+  padding: 0 0 0 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+/* tag */
+header {
+  margin: 0 0 10px;
+}
+
+header a {
+  padding: 0 0 0 30px;
+}
+
+main nav {
+  max-width: 1174px;
+  margin: 0 0 30px;
+}
+
+main nav ul {
+  max-width: 1174px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+
+table thead tr {
+  background-color: #50535d;
+  color: #fff;
+}
+
+table tbody tr {
+  height: 50px;
+  padding: .35em;
+  background-color: #fff;
+  border: 2px solid #eee;
+}
+
+table thead tr th {
+  padding: 2em;
+  font-size: .9rem;
+  background-color: #50535d;
+  border: 2px solid #eee;
+}
+
+table tbody tr td {
+  padding: .5em;
+  font-size: .8rem;
+  border: 2px solid #eee;
+  text-align: left;
+}
+
+table tfoot tr td button {
+  margin: 30px 0;
+}
+
+table thead tr th:first-child {
+  width: 20px;
+}
+
+table thead tr th:nth-child(2) {
+  width: 200px;
+}
+
+table thead tr th:nth-child(3) {
+  width: 300px;
+}
+
+table thead tr th:nth-child(4) {
+  width: 50px;
+}
+
+table thead tr th:nth-child(5) {
+  width: 30px;
+  text-align: center;
+}
+
+/* general */
+input[type=text] {
+  height: 40px;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+input[type="file"] {
+  margin: 0;
+  padding: 2px;
+}
+
+input[type="file"],
+input[type="file"]::-webkit-file-upload-button {
+  font: inherit;
+  margin: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  padding: .1em .5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(white));
+  box-shadow: inset 10px 0 12px -12px rgba(0, 0, 0, 0.4), inset -10px 0 12px -12px rgba(0, 0, 0, 0.4);
+  line-height: normal;
+}
+
+input[type="file"]::-webkit-file-upload-button:focus {
+  outline-offset: -2px;
+}
+
+.superwide {
+  width: 500px;
+}
+
+.wide {
+  width: 250px;
+}
+
+.default {
+  width: 120px;
+}
+
+.narrow {
+  width: 30px;
+}
+
+.textarea {
+  height: 100px;
+}
+
+.display-none {
+  display: none;
+}
+
+.filearea {
+  margin: 10px 0;
+}

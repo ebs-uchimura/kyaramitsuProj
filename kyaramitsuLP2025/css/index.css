@@ -1,0 +1,70 @@
+@charset "utf-8";
+/*
+* { outline: 2px solid red; }
+*/
+/*------------------------------
+ ▼ 共通デザイン（モバイル向け）
+ -------------------------------*/
+body {
+  padding-top: 3vw;
+  background-color: #000;
+}
+
+/* 通常画像エリア */
+.imagearea {
+  width: 100%;
+}
+
+.imagearea img {
+  width: 100%;
+}
+
+/* ボタン画像エリア */
+.buttonarea {
+  width: 100%;
+  height: 50vw;
+  background-image: url("../img/sample.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.buttonarea img {
+  width: 88%;
+  margin: 38vw 6vw;
+}
+
+/*-------------------------------
+ ▼ 大型画面向けデザイン（PCなど）
+ --------------------------------*/
+@media screen and (min-width: 769px) {
+  body {
+    padding-top: 30px;
+    background-color: #000;
+  }
+
+  /* 通常画像エリア */
+  .imagearea {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .imagearea img {
+    width: 100%;
+  }
+
+  /* ボタン画像エリア */
+  .buttonarea {
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url("../img/sample.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .buttonarea img {
+    width: 88%;
+    margin: 380px 60px;
+  }
+
+ }
